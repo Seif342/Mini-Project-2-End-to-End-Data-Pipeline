@@ -1,0 +1,8 @@
+$kind: collection
+description: |-
+  ELT path — raw CSV loaded to DB, transformed with SQL at query time.
+  All requests use API Key auth.
+
+  ⚠️ If these return 500, the attrition table doesn't exist yet. Run:
+  python pipeline.py --attrition-csv employee_attrition.csv
+order: 4000

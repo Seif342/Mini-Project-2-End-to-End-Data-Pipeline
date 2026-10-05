@@ -1,0 +1,7 @@
+$kind: http-request
+description: Get a single article by database ID. Change the ID in the URL.
+url: "{{base_url}}/articles/1"
+method: GET
+headers:
+  X-API-Key: "{{api_key}}"
+order: 6000

@@ -1,0 +1,19 @@
+$kind: http-request
+description: Total article count with breakdown per source (bbc, nytimes, books.toscrape, etc).
+url: "{{base_url}}/articles/stats"
+method: GET
+headers:
+  X-API-Key: "{{api_key}}"
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test('Status 200', function() {
+          pm.response.to.have.status(200);
+      });
+      pm.test('Has total and by_source', function() {
+          var json = pm.response.json();
+          pm.expect(json).to.have.property('total_articles');
+          pm.expect(json).to.have.property('by_source');
+      });
+    language: text/javascript
+order: 1000

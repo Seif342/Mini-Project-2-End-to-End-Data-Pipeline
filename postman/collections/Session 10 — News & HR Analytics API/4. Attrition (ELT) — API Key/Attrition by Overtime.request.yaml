@@ -1,0 +1,9 @@
+$kind: http-request
+description: |-
+  Attrition rate by overtime status.
+  SQL: GROUP BY cross-tab (from transform_attrition.sql query 4).
+url: "{{base_url}}/attrition/by-overtime"
+method: GET
+headers:
+  X-API-Key: "{{api_key}}"
+order: 3000

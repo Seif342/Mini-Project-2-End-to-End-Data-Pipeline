@@ -1,0 +1,7 @@
+$kind: http-request
+name: GET /attrition/department/Sales
+url: "{{base_url}}/attrition/department/Sales"
+method: GET
+headers:
+  X-API-Key: "{{api_key}}"
+order: 3353275751466236

@@ -1,0 +1,7 @@
+$kind: http-request
+name: GET /articles/search (default)
+url: "{{base_url}}/articles/search"
+method: GET
+headers:
+  X-API-Key: CMoeAa-06uwbtOwCTRbfNLLlACqx3PS10ajUNtI28js
+order: 424101803989188

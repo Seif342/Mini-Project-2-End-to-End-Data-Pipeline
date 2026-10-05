@@ -1,0 +1,9 @@
+$kind: http-request
+description: |-
+  Attrition rate by tenure bucket (new <2y, mid 2-5y, veteran 5y+).
+  SQL: CASE WHEN (from transform_attrition.sql query 3).
+url: "{{base_url}}/attrition/by-tenure"
+method: GET
+headers:
+  X-API-Key: "{{api_key}}"
+order: 4000

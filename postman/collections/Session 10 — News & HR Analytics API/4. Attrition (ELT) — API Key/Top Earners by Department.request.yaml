@@ -1,0 +1,11 @@
+$kind: http-request
+description: |-
+  Top N earners per department.
+  SQL: RANK() OVER (PARTITION BY ... ORDER BY ...) window function (from transform_attrition.sql query 5).
+url: "{{base_url}}/attrition/top-earners?limit_per_dept=3"
+method: GET
+headers:
+  X-API-Key: "{{api_key}}"
+queryParams:
+  limit_per_dept: "3"
+order: 5000

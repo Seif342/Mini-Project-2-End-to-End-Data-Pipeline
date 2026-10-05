@@ -1,0 +1,13 @@
+# Use this workspace to collaborate
+workspace:
+  id: 88fa722d-563c-49ef-932b-c6de60dbddd3
+
+localResources:
+  collections:
+    - ../Session11_API.postman_collection.json
+
+# Each entry here maps a local resource to one or more corresponding objects in Postman Cloud
+
+cloudResources:
+  collections:
+    ../postman/collections/Session 10 — News & HR Analytics API: 7f51a8ad-fb19-4b49-b1ab-645eb20a5b1a

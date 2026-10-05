@@ -1,0 +1,12 @@
+$kind: http-request
+name: GET /attrition/risk-profile
+url: "{{base_url}}/attrition/risk-profile?limit=20"
+method: GET
+headers:
+  X-API-Key: "{{api_key}}"
+queryParams:
+  - key: limit
+    value: "20"
+    disabled: false
+    description: ""
+order: 4455534469496491

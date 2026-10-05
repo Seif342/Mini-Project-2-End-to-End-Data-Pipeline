@@ -1,0 +1,10 @@
+$kind: http-request
+description: |-
+  Same endpoint as folder 3, but using JWT Bearer token.
+
+  Demonstrates that both auth methods work on the same endpoints.
+url: "{{base_url}}/articles/stats"
+method: GET
+headers:
+  Authorization: Bearer {{jwt_token}}
+order: 2000

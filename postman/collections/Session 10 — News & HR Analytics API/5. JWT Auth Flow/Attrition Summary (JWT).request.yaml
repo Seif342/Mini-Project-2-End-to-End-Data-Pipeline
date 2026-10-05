@@ -1,0 +1,10 @@
+$kind: http-request
+description: |-
+  Same endpoint as folder 4, but using JWT Bearer token instead of API Key.
+
+  ⚠️ Run "Get JWT Token" first (folder 2) — it auto-saves the token.
+url: "{{base_url}}/attrition/summary"
+method: GET
+headers:
+  Authorization: Bearer {{jwt_token}}
+order: 1000

@@ -1,0 +1,11 @@
+$kind: http-request
+description: Combine source and title filters.
+url: "{{base_url}}/articles?source=quotes.toscrape&title=life&limit=5"
+method: GET
+headers:
+  X-API-Key: "{{api_key}}"
+queryParams:
+  source: quotes.toscrape
+  title: life
+  limit: "5"
+order: 5000

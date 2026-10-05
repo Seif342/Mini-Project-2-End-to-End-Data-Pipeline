@@ -1,0 +1,9 @@
+$kind: http-request
+description: |-
+  Attrition rate + avg income per department.
+  SQL: GROUP BY + FILTER + AVG (from transform_attrition.sql queries 1 & 2).
+url: "{{base_url}}/attrition/by-department"
+method: GET
+headers:
+  X-API-Key: "{{api_key}}"
+order: 2000

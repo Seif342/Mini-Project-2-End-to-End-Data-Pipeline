@@ -1,0 +1,14 @@
+$kind: http-request
+description: Verify that invalid API keys are rejected.
+url: "{{base_url}}/articles/stats"
+method: GET
+headers:
+  X-API-Key: wrong-key-here
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test('Returns 401 with wrong key', function() {
+          pm.response.to.have.status(401);
+      });
+    language: text/javascript
+order: 3000

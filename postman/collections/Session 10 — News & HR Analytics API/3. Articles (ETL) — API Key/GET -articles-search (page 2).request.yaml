@@ -1,0 +1,12 @@
+$kind: http-request
+name: GET /articles/search (page 2)
+url: "{{base_url}}/articles/search?page=2"
+method: GET
+headers:
+  X-API-Key: CMoeAa-06uwbtOwCTRbfNLLlACqx3PS10ajUNtI28js
+queryParams:
+  - key: page
+    value: "2"
+    disabled: false
+    description: ""
+order: 3407152878970653

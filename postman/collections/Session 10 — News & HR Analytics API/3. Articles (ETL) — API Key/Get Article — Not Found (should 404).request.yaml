@@ -1,0 +1,14 @@
+$kind: http-request
+description: Verify 404 for non-existent article ID.
+url: "{{base_url}}/articles/999999"
+method: GET
+headers:
+  X-API-Key: "{{api_key}}"
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test('Returns 404', function() {
+          pm.response.to.have.status(404);
+      });
+    language: text/javascript
+order: 7000

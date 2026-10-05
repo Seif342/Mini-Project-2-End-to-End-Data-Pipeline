@@ -1,0 +1,10 @@
+$kind: http-request
+description: Case-insensitive partial match on article title.
+url: "{{base_url}}/articles?title=love&limit=5"
+method: GET
+headers:
+  X-API-Key: "{{api_key}}"
+queryParams:
+  title: love
+  limit: "5"
+order: 4000

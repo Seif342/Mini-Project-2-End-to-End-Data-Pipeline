@@ -1,0 +1,29 @@
+$kind: http-request
+description: |-
+  Exchange client credentials for a JWT token.
+
+  The test script auto-saves the token to the `jwt_token` collection variable so the JWT folder requests work immediately.
+url: "{{base_url}}/token"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+        "client_id": "{{client_id}}",
+        "client_secret": "{{client_secret}}"
+    }
+scripts:
+  - type: afterResponse
+    code: |-
+      if (pm.response.code === 200) {
+          var json = pm.response.json();
+          pm.collectionVariables.set('jwt_token', json.access_token);
+          pm.test('Token saved to collection variable', function() {
+              pm.expect(json.access_token).to.be.a('string');
+              pm.expect(json.token_type).to.eql('bearer');
+          });
+      }
+    language: text/javascript
+order: 1000

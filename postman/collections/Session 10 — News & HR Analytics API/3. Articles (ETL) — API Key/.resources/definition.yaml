@@ -1,0 +1,5 @@
+$kind: collection
+description: |-
+  ETL path — scraped articles, cleaned in Pandas, loaded to DB.
+  All requests use API Key auth.
+order: 3000

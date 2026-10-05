@@ -1,0 +1,11 @@
+$kind: http-request
+description: "Filter articles by source. Try: bbc, nytimes, cnn, books.toscrape,
+  quotes.toscrape"
+url: "{{base_url}}/articles?source=books.toscrape&limit=5"
+method: GET
+headers:
+  X-API-Key: "{{api_key}}"
+queryParams:
+  source: books.toscrape
+  limit: "5"
+order: 2702

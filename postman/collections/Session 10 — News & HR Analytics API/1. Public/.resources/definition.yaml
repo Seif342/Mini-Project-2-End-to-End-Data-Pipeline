@@ -1,0 +1,3 @@
+$kind: collection
+description: No authentication required.
+order: 1000

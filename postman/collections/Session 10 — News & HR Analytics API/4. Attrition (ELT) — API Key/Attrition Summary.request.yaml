@@ -1,0 +1,19 @@
+$kind: http-request
+description: "Overall attrition: total employees, yes/no count, rate."
+url: "{{base_url}}/attrition/summary"
+method: GET
+headers:
+  X-API-Key: "{{api_key}}"
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test('Status 200', function() {
+          pm.response.to.have.status(200);
+      });
+      pm.test('Has expected fields', function() {
+          var json = pm.response.json();
+          pm.expect(json).to.have.property('total_employees');
+          pm.expect(json).to.have.property('attrition_rate');
+      });
+    language: text/javascript
+order: 1000

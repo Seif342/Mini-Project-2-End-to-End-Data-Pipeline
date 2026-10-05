@@ -1,0 +1,5 @@
+$kind: http-request
+description: Public — no auth needed. Returns API info and available paths.
+url: "{{base_url}}/"
+method: GET
+order: 1000

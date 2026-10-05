@@ -1,0 +1,32 @@
+$kind: collection
+description: |-
+  Two data pipelines, one API.
+
+  **Path A (ETL):** Scraped articles → cleaned → loaded
+  **Path B (ELT):** Raw CSV → loaded → SQL transforms
+
+  ## Setup
+  1. Set `base_url` variable (default: http://localhost:8000)
+  2. Run "Get JWT Token" first — it auto-saves the token
+  3. All protected endpoints use API Key by default
+  4. Switch to Bearer token in the JWT folder
+
+  ## Auth Methods
+  - **API Key:** X-API-Key header
+  - **JWT Bearer:** POST /token → use access_token
+variables:
+  - key: base_url
+    value: http://localhost:8000
+    disabled: false
+  - key: api_key
+    value: my-super-secret-key
+    disabled: false
+  - key: client_id
+    value: demo_client
+    disabled: false
+  - key: client_secret
+    value: demo_secret_value
+    disabled: false
+  - key: jwt_token
+    secret: true
+    disabled: false

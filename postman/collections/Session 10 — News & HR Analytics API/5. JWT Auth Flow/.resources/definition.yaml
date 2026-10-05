@@ -1,0 +1,6 @@
+$kind: collection
+description: |-
+  Same endpoints but using JWT Bearer token.
+
+  Run "Get JWT Token" in folder 2 first — the test script auto-saves the token to the jwt_token variable.
+order: 5000

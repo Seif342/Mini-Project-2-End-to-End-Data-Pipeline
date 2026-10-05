@@ -1,0 +1,16 @@
+$kind: http-request
+name: GET /articles/search (filter)
+url: "{{base_url}}/articles/search?source=bbc&date_from=2024-01-01"
+method: GET
+headers:
+  X-API-Key: CMoeAa-06uwbtOwCTRbfNLLlACqx3PS10ajUNtI28js
+queryParams:
+  - key: source
+    value: bbc
+    disabled: false
+    description: ""
+  - key: date_from
+    value: 2024-01-01
+    disabled: false
+    description: ""
+order: 1171293931567857
